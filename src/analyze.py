@@ -13,7 +13,7 @@ NAMES={'banknote':'Banknote','cancer':'WDBC','ionosphere':'Ionosphere','red':'Wi
 def se(x): return x.std(ddof=1)/np.sqrt(len(x))
 
 def main():
- root=Path('.'); paper=root/'paper'; fig=root/'figures'; fig.mkdir(exist_ok=True)
+ root=Path('.'); paper=root/'paper'; fig=root/'figures'; fig.mkdir(exist_ok=True); paper.mkdir(exist_ok=True)
  x=pd.read_csv('results/final/real.csv'); x['dataset']=pd.Categorical(x.dataset,categories=list(NAMES),ordered=True)
  primary=x[(x.n==32)&(x.model=='MLP')]
  grouped=primary.groupby(['dataset','seed','method'],observed=True).accuracy.mean().unstack('method')
