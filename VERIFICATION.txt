@@ -1,0 +1,15 @@
+Verification completed 11 October 2026
+
+Public artifact commit: 2db268137f0cdaf8a0fd59b66a2a872253925d73
+Fresh clone: https://github.com/shi1720/parityrepair
+
+Fresh-clone checks (same pinned Python environment used for research):
+- python -m pytest -q: 6 passed.
+- python src/analyze.py: regenerated figures, tables, and reported summary from released CSV files without downloaded datasets or private manuscript files.
+- python src/validate_results.py: passed; 100 dataset/split evaluations, 34,560 final comparison rows, 19,200 synthetic rows, 1,200 stress rows, and 60 exhaustive solver comparisons.
+
+The full training/experiment scripts were executed before manuscript preparation. Fresh-clone validation reruns tests and aggregation; it does not independently rerun all model training. Raw CSV row counts are not independent sample counts.
+
+PDF: Tectonic compilation completed, 11 A4 pages, all fonts embedded, no overfull boxes or unresolved references. Rendered pages and figures visually inspected. Three figures and two tables. LNCS class and bibliography style included in the local source package. External publisher/class files retain their respective licenses.
+
+Theoretical checks are software checks, not independent peer review. Author scholarly review and approval remain necessary before submission.
