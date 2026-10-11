@@ -1,0 +1,37 @@
+{
+  "red": {
+    "url": "https://archive.ics.uci.edu/static/public/186/wine+quality.zip",
+    "sha256": "3ed56667f4b828242bd732d7d1dd7f2861e54432239d7fa63877014cbb0304d4",
+    "n": 1599,
+    "d": 11,
+    "n_after_dedup": 1359
+  },
+  "white": {
+    "url": "https://archive.ics.uci.edu/static/public/186/wine+quality.zip",
+    "sha256": "3ed56667f4b828242bd732d7d1dd7f2861e54432239d7fa63877014cbb0304d4",
+    "n": 4898,
+    "d": 11,
+    "n_after_dedup": 3961
+  },
+  "banknote": {
+    "url": "https://archive.ics.uci.edu/static/public/267/banknote+authentication.zip",
+    "sha256": "1e2acd9a2085fadf3d8145c12d3d22af853320d52294a6590c2eaf75fdc05227",
+    "n": 1372,
+    "d": 4,
+    "n_after_dedup": 1348
+  },
+  "ionosphere": {
+    "url": "https://archive.ics.uci.edu/static/public/52/ionosphere.zip",
+    "sha256": "4d218ece62756c99659011a13052d06464f13cb2b3d0410ce2aef16de1403860",
+    "n": 351,
+    "d": 33,
+    "n_after_dedup": 350
+  },
+  "cancer": {
+    "source": "sklearn.datasets.load_breast_cancer",
+    "n": 569,
+    "d": 30,
+    "array_sha256": "25e2eb7b7a8745b1bde5ba18bc4969983d2e2f403291ecd5bde4a29ef30c3859",
+    "n_after_dedup": 569
+  }
+}

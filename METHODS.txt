@@ -1,0 +1,15 @@
+Development and evaluation provenance
+
+An initial exploratory run (seeds 0-9, results/real.csv) preceded record deduplication. It is not used in the manuscript results. Symmetric eigendecomposition replaced general matrix fractional powers for CORAL to avoid numerical complex residues. The population test was corrected to distinguish informative parity probes from invariant diagonal second moments.
+
+Intermediate fixed-order experiments use seeds 100-119 (results/main). Negative transfer in the pilot motivated source-only order selection. Final comparisons use seeds 200-219 (results/final), with eight fixed source episodes and smaller order breaking ties. No final-target labels or final outcomes were used to tune method hyperparameters. This is an exploratory study with a separate final evaluation, not a preregistered experiment.
+
+During result aggregation, the control identifier None was changed to Unrepaired to prevent automatic CSV missing-value parsing. Numerical experiment outcomes were unchanged.
+
+Exact feature/label duplicates are removed before splitting. The retained datasets also have unique feature rows. Approximately 50/20/10/20 percent are assigned to fitting/reference/calibration/test partitions within each split. Fitting includes internal model validation. Standardization uses fitting inputs only. Source-order selection also uses only fitting inputs. Class labels are never passed to the repair or order-selection functions.
+
+All reported uncertainties describe variability across repeated overlapping splits conditional on the selected datasets. Masks within a split and nested calibration sizes are correlated. Neither the number of result rows nor the number of fault masks represents independent statistical replication.
+
+The approximate optimization objective ignores correlation among moment estimates and can overweight redundant noisy statistics. A sixty-instance exhaustive audit found agreement on the low-dimensional audited instances; it is not a general optimality theorem. Source-order selection also has sampling noise and does not dominate all fixed-order variants.
+
+The confidence set is separate from the point estimator. Its coverage proposition assumes pure fixed coordinate reflection, independent appropriately sampled reference/target data, and fixed preprocessing/probe families. It is not a guarantee under temporal drift, changing class mixtures, additive offsets, or arbitrary distribution shifts. Real-data rank summaries are diagnostics; the i.i.d. synthetic experiment matches the theorem's sampling model.
